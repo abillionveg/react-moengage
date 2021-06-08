@@ -8,7 +8,8 @@
   "scripts": {
     "start": "export NODE_ENV=development && webpack-dev-server --config webpack.config.dev.js",
     "bundle": "export NODE_ENV=production && webpack -p --config webpack.config.dist.js",
-    "lint": "eslint --ignore-path .gitignore --fix"
+    "lint": "eslint --ignore-path .gitignore --fix",
+    "postinstall": "node ./node_modules/husky/lib/bin.js install"
   },
   "author": {
     "name": "Muntasir Syed",
@@ -45,8 +46,7 @@
     "webpack": "4.41.2",
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.11.2"
-  },
-  "postinstall": "node ./node_modules/husky/lib/installer/bin install",
+  },  
   "peerDependencies": {},
   "dependencies": {
     "@semantic-release/changelog": "^5.0.1",
