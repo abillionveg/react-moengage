@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/abillionveg/react-moengage/compare/v1.0.4...v1.0.5) (2021-06-08)
+
+
+### Bug Fixes
+
+* add npm plugin for semantic-release ([217c293](https://github.com/abillionveg/react-moengage/commit/217c2932523365a652fa65d6b1333452647f1eb3))
+* use github package registry ([af5658c](https://github.com/abillionveg/react-moengage/commit/af5658cf118ccaaea63493db7bf26f78c5e94601))
+
 ## [1.0.4](https://github.com/abillionveg/react-moengage/compare/v1.0.3...v1.0.4) (2021-06-08)
 
 
