@@ -15,6 +15,9 @@
     "name": "Muntasir Syed",
     "email": "me@muntasirsyed.com"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": "git://github.com/abillionveg/react-moengage.git",
   "homepage": "https://github.com/abillionveg/react-moengage.git",
   "keywords": [
@@ -61,6 +64,7 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
       [
         "@semantic-release/changelog",
         {
