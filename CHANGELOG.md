@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/abillionveg/react-moengage/compare/v1.0.6...v1.1.0) (2021-06-08)
+
+
+### Features
+
+* do not insert SDK script if it's already present ([dcb3fcb](https://github.com/abillionveg/react-moengage/commit/dcb3fcb15385029c69f570e92fa022f282439843))
+
 ## [1.0.6](https://github.com/abillionveg/react-moengage/compare/v1.0.5...v1.0.6) (2021-06-08)
 
 
