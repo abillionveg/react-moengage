@@ -1,6 +1,6 @@
 {
-  "name": "react-moengage",
-  "version": "1.0.4",
+  "name": "@abillionveg/react-moengage",
+  "version": "0.0.0-development",
   "license": "MIT",
   "description": "Wrapper for the MoEngage Web SDK",
   "main": "./dist/react-moengage.js",
@@ -15,8 +15,8 @@
     "name": "Muntasir Syed",
     "email": "me@muntasirsyed.com"
   },
-  "repository": "git://github.com/muntasirsyed/react-moengage.git",
-  "homepage": "https://github.com/muntasirsyed/react-moengage.git",
+  "repository": "git://github.com/abillionveg/react-moengage.git",
+  "homepage": "https://github.com/abillionveg/react-moengage.git",
   "keywords": [
     "react",
     "javascript",
