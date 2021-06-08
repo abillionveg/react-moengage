@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/abillionveg/react-moengage/compare/v1.0.5...v1.0.6) (2021-06-08)
+
+
+### Bug Fixes
+
+* remove the unneeded postinstall script ([4a0bbaa](https://github.com/abillionveg/react-moengage/commit/4a0bbaa74b33a16605bcc6cfb6e49ee763fa23d7))
+
 ## [1.0.5](https://github.com/abillionveg/react-moengage/compare/v1.0.4...v1.0.5) (2021-06-08)
 
 
