@@ -29,3 +29,6 @@ tags*
 
 # env
 .env*
+
+# Output
+dist/
