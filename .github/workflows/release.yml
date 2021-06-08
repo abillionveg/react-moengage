@@ -5,6 +5,8 @@ on:
       - main # You may need to change this to master
       - develop
 
+environment: production
+
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
