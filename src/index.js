@@ -49,63 +49,66 @@ export default {
         initialised = typeof window !== "undefined" && !!window.moe
 
         /* eslint-disable */
-        !(function (i, s, o, g, r, a, m, n) {
-            i.moengage_object = r
-            let f, h
-            const t = {}
-            const q = function (f) {
-                return function () {
-                    ;(i.moengage_q = i.moengage_q || []).push({ f: f, a: arguments })
+        if (!!window.moe) {
+            // Do not add script if it's already there
+            !(function (i, s, o, g, r, a, m, n) {
+                i.moengage_object = r
+                let f, h
+                const t = {}
+                const q = function (f) {
+                    return function () {
+                        ;(i.moengage_q = i.moengage_q || []).push({ f: f, a: arguments })
+                    }
                 }
-            }
-            ;(f = [
-                "track_event",
-                "add_user_attribute",
-                "add_first_name",
-                "add_last_name",
-                "add_email",
-                "add_mobile",
-                "add_user_name",
-                "add_gender",
-                "add_birthday",
-                "destroy_session",
-                "add_unique_user_id",
-                "moe_events",
-                "call_web_push",
-                "track",
-                "location_type_attribute",
-            ]),
-                (h = { onsite: ["getData", "registerCallback"] })
-            for (const k in f) {
-                t[f[k]] = q(f[k])
-            }
-            for (const k in h)
-                for (const l in h[k]) {
-                    null == t[k] && (t[k] = {}), (t[k][h[k][l]] = q(k + "." + h[k][l]))
+                ;(f = [
+                    "track_event",
+                    "add_user_attribute",
+                    "add_first_name",
+                    "add_last_name",
+                    "add_email",
+                    "add_mobile",
+                    "add_user_name",
+                    "add_gender",
+                    "add_birthday",
+                    "destroy_session",
+                    "add_unique_user_id",
+                    "moe_events",
+                    "call_web_push",
+                    "track",
+                    "location_type_attribute",
+                ]),
+                    (h = { onsite: ["getData", "registerCallback"] })
+                for (const k in f) {
+                    t[f[k]] = q(f[k])
                 }
-            a = s.createElement(o)
-            m = s.getElementsByTagName(o)[0]
-            a.async = 1
-            a.src = g
-            m.parentNode.insertBefore(a, m)
-            i.moe =
-                i.moe ||
-                function () {
-                    n = arguments[0]
-                    return t
+                for (const k in h)
+                    for (const l in h[k]) {
+                        null == t[k] && (t[k] = {}), (t[k][h[k][l]] = q(k + "." + h[k][l]))
+                    }
+                a = s.createElement(o)
+                m = s.getElementsByTagName(o)[0]
+                a.async = 1
+                a.src = g
+                m.parentNode.insertBefore(a, m)
+                i.moe =
+                    i.moe ||
+                    function () {
+                        n = arguments[0]
+                        return t
+                    }
+                a.onload = function () {
+                    if (n) {
+                        i[r] = moe(n)
+                    }
                 }
-            a.onload = function () {
-                if (n) {
-                    i[r] = moe(n)
-                }
-            }
-        })(
-            window,
-            document,
-            "script",
-            "https://cdn.moengage.com/webpush/moe_webSdk.min.latest.js",
-            "Moengage",
-        )
+            })(
+                window,
+                document,
+                "script",
+                "https://cdn.moengage.com/webpush/moe_webSdk.min.latest.js",
+                "Moengage",
+            )
+        }
         /* eslint-disable */
 
         if (!appId) {
