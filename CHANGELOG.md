@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/abillionveg/react-moengage/compare/v1.1.0...v1.2.0) (2021-06-11)
+
+
+### Features
+
+* pass enableSPA parameter ([13c465b](https://github.com/abillionveg/react-moengage/commit/13c465bacdf9458bfa2483d95a9db38bb062082b))
+
 # [1.1.0](https://github.com/abillionveg/react-moengage/compare/v1.0.6...v1.1.0) (2021-06-08)
 
 
