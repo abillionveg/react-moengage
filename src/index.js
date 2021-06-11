@@ -38,6 +38,7 @@ const verifyInit = () => {
 
 const defaultOptions = {
     debugLogs: 1,
+    enableSPA: false,
 }
 
 // --------------------------------------------------------
@@ -117,6 +118,7 @@ export default {
             MoEngageObj = moe({
                 app_id: appId,
                 debug_logs: options.debugLogs,
+                enableSPA: options.enableSPA,
                 swPath: options.swPath ? options.swPath : undefined,
                 cluster: options.cluster ? options.cluster : undefined,
             })
