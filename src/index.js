@@ -1,5 +1,3 @@
-let MoEngageObj
-
 let initialised = false
 let debug = false
 
@@ -49,7 +47,7 @@ export default {
         initialised = typeof window !== "undefined" && !!window.moe
 
         /* eslint-disable */
-        if (!!window.moe) {
+        if (!window.moe) {
             // Do not add script if it's already there
             !(function (i, s, o, g, r, a, m, n) {
                 i.moengage_object = r
@@ -114,7 +112,7 @@ export default {
         if (!appId) {
             warn("Call to MoEngage.init() is missing appId")
         } else {
-            MoEngageObj = moe({
+            window.moe({
                 app_id: appId,
                 debug_logs: options.debugLogs,
                 swPath: options.swPath ? options.swPath : undefined,
@@ -126,7 +124,7 @@ export default {
     },
 
     get moe() {
-        return MoEngageObj
+        return window.Moengage
     },
 
     trackEvent: (name, data) => {
@@ -134,7 +132,7 @@ export default {
             return
         }
 
-        MoEngageObj.track_event(name, data)
+        window.Moengage.track_event(name, data)
 
         if (debug) {
             log(`Called moe.track_event(${name}, ...)`)
@@ -147,7 +145,7 @@ export default {
             return
         }
         if (attribute && value) {
-            MoEngageObj.add_user_attribute(attribute, value)
+            window.Moengage.add_user_attribute(attribute, value)
 
             if (debug) {
                 log(`Called moe.add_user_attribute(${attribute}, ${value})`)
@@ -160,7 +158,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_first_name(firstName)
+        window.Moengage.add_first_name(firstName)
 
         if (debug) {
             log(`Called moe.add_first_name(${firstName})`)
@@ -172,7 +170,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_last_name(lastName)
+        window.Moengage.add_last_name(lastName)
 
         if (debug) {
             log(`Called moe.add_last_name(${lastName})`)
@@ -184,7 +182,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_email(email)
+        window.Moengage.add_email(email)
 
         if (debug) {
             log(`Called moe.add_email(${email})`)
@@ -196,7 +194,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_mobile(mobile)
+        window.Moengage.add_mobile(mobile)
 
         if (debug) {
             log(`Called moe.add_mobile(${mobile})`)
@@ -208,7 +206,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_user_name(userName)
+        window.Moengage.add_user_name(userName)
 
         if (debug) {
             log(`Called moe.add_user_name(${userName})`)
@@ -220,7 +218,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_gender(gender)
+        window.Moengage.add_gender(gender)
 
         if (debug) {
             log(`Called moe.add_gender(${gender})`)
@@ -232,7 +230,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_birthday(date)
+        window.Moengage.add_birthday(date)
 
         if (debug) {
             log(`Called moe.add_birthday(${date})`)
@@ -244,7 +242,7 @@ export default {
             return
         }
 
-        MoEngageObj.add_unique_user_id(uniqueUserId)
+        window.Moengage.add_unique_user_id(uniqueUserId)
 
         if (debug) {
             log(`Called moe.add_unique_user_id(${uniqueUserId})`)
@@ -256,7 +254,7 @@ export default {
             return
         }
 
-        MoEngageObj.update_unique_user_id(uniqueUserId)
+        window.Moengage.update_unique_user_id(uniqueUserId)
 
         if (debug) {
             log(`Called moe.update_unique_user_id(${uniqueUserId})`)
@@ -268,7 +266,7 @@ export default {
             return
         }
 
-        MoEngageObj.call_web_push(options)
+        window.Moengage.call_web_push(options)
 
         if (debug) {
             log(`Called moe.call_web_push()`)
@@ -283,7 +281,7 @@ export default {
             return
         }
 
-        MoEngageObj.destroy_session()
+        window.Moengage.destroy_session()
 
         if (debug) {
             log(`Called moe.destory()`)
