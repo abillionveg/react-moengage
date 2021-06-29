@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/abillionveg/react-moengage/compare/v1.2.0...v1.2.1) (2021-06-25)
+
+
+### Bug Fixes
+
+* prevent inconsistent initalisation of Moengage SDK ([c1d51f0](https://github.com/abillionveg/react-moengage/commit/c1d51f07d60021d783e191ecfbe0caa4c9716999))
+
 # [1.2.0](https://github.com/abillionveg/react-moengage/compare/v1.1.0...v1.2.0) (2021-06-11)
 
 
